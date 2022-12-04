@@ -1,9 +1,24 @@
-import type { NextPage } from 'next';
+import { MainLayout } from 'components/layout';
+import { NextPageWithLayout } from 'models';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css';
 
-const Home: NextPage = () => {
+const Home: NextPageWithLayout = () => {
+  const router = useRouter();
+
+  function goesToDetailPage() {
+    router.push({
+      pathname: '/posts/[postId]',
+      query: {
+        postId: 123,
+        ref: 'social',
+      },
+    });
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -20,6 +35,12 @@ const Home: NextPage = () => {
         <p className={styles.description}>
           Get started by editing <code className={styles.code}>pages/index.tsx</code>
         </p>
+
+        <Link href="/about" legacyBehavior>
+          <a>Goes to about</a>
+        </Link>
+
+        <button onClick={goesToDetailPage}>Goes to post detail page</button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -62,5 +83,7 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+Home.Layout = MainLayout;
 
 export default Home;
