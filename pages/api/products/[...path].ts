@@ -17,8 +17,6 @@ const proxy = httpProxy.createProxyServer();
 export default function handler(req: NextApiRequest, res: NextApiResponse<any>) {
   req.headers.cookie = 'req.header';
 
-  console.log('check running server');
-
   proxy.web(req, res, {
     target: process.env.API_URL,
     changeOrigin: true,

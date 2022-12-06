@@ -18,9 +18,10 @@
     "paths": {
       "@/components/*": ["./component/*"],
       "@/styles/*": ["./styles/*"],
-      "@constants/*": ["./constants/*"],
-      "@hooks/*": ["./hooks/*"],
-      "@model/*": ["./model/*"]
+      "@/constants/*": ["./constants/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/model/*": ["./model/*"],
+      "@/api/*": ["./api-client/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
