@@ -21,17 +21,17 @@ export default function PostDetailPageProps({ post }: PostDetailPageProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  console.log('get static paths');
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   console.log('get static paths');
 
-  const response = await fetch('https://js-post-api.herokuapp.com/api/posts?_page=1');
-  const data = await response.json();
+//   const response = await fetch('https://js-post-api.herokuapp.com/api/posts?_page=1');
+//   const data = await response.json();
 
-  return {
-    paths: data.data.map((post: any) => ({ params: { postId: post.id } })),
-    fallback: false,
-  };
-};
+//   return {
+//     paths: data.data.map((post: any) => ({ params: { postId: post.id } })),
+//     fallback: false,
+//   };
+// };
 
 // export const getStaticProps: GetStaticProps<PostDetailPageProps> = async (
 //   context: GetStaticPropsContext
