@@ -1,6 +1,7 @@
-import { EmptyLayout } from 'components/layout';
+import axiosClient from '@/api/axios-client';
+import { EmptyLayout, MainLayout } from 'components/layout';
 import { AppPropsWithLayout } from 'models';
-import { AppProps } from 'next/app';
+import { SWRConfig } from 'swr';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
@@ -9,9 +10,11 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const Layout = Component.Layout ?? EmptyLayout;
 
   return (
-    // <Layout>
-    <Component {...pageProps} />
-    // </Layout>
+    <SWRConfig value={{ fetcher: (url) => axiosClient.get(url), shouldRetryOnError: false }}>
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
+    </SWRConfig>
   );
 }
 

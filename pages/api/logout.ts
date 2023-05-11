@@ -1,14 +1,15 @@
 import Cookies from 'cookies';
-import httpProxy from 'http-proxy';
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+type Data = {
+  message: string;
+};
 
 export const config = {
   api: {
     bodyParser: false,
   },
 };
-
-const proxy = httpProxy.createProxyServer();
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<any>) {
   if (req.method !== 'POST') {

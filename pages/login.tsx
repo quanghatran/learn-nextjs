@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { authApi } from '../api-client';
+import { authApi } from '@/api/index';
 
 export default function LoginPage() {
   async function handleLoginClick() {
     try {
       await authApi.login({
-        username: 'test123',
-        password: 'test123123',
+        username: 'QuangHaa',
+        password: 'password@123',
       });
     } catch (error) {
       console.log('failed to login');
