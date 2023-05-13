@@ -21,7 +21,8 @@
       "@/constants/*": ["./constants/*"],
       "@/hooks/*": ["./hooks/*"],
       "@/model/*": ["./model/*"],
-      "@/api/*": ["./api-client/*"]
+      "@/api/*": ["./api-client/*"],
+      "@/utils/*": ["./utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
