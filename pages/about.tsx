@@ -1,4 +1,4 @@
-import { MainLayout } from 'components/layout';
+import { AdminLayout } from 'components/layout';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 
@@ -18,7 +18,7 @@ export default function AboutPage(props: AboutPageProps) {
   );
 }
 
-AboutPage.Layout = MainLayout;
+AboutPage.Layout = AdminLayout;
 
 export async function getServerSideProps() {
   return { props: {} };

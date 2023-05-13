@@ -11,9 +11,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <SWRConfig value={{ fetcher: (url) => axiosClient.get(url), shouldRetryOnError: false }}>
-      <MainLayout>
+      <Layout>
         <Component {...pageProps} />
-      </MainLayout>
+      </Layout>
     </SWRConfig>
   );
 }
