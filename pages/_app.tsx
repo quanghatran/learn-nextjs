@@ -16,8 +16,6 @@ function MyApp({
   pageProps,
   emotionCache = clientSideEmotionCache,
 }: AppPropsWithLayout) {
-  console.log('app re-render');
-
   const Layout = Component.Layout ?? EmptyLayout;
 
   return (
