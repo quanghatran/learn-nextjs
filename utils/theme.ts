@@ -11,6 +11,9 @@ import { createTheme } from '@mui/material/styles';
 
 // Create a theme instance.
 export const theme = createTheme({
+  typography: {
+    fontFamily: '"Heebo", sans-serif',
+  },
   palette: {
     primary: {
       main: '#ff6464',
@@ -20,6 +23,40 @@ export const theme = createTheme({
     },
     error: {
       main: red.A400,
+    },
+  },
+  components: {
+    MuiContainer: {
+      defaultProps: {
+        maxWidth: 'md',
+      },
+      styleOverrides: {
+        maxWidthSm: {
+          maxWidth: '680px',
+          '@medial (min-width: 600px)': {
+            maxWidth: '680px',
+          },
+        },
+        maxWidthMd: {
+          maxWidth: '860px',
+          '@medial (min-width: 900px)': {
+            maxWidth: '860px',
+          },
+        },
+      },
+      variants: [],
+    },
+    MuiLink: {
+      defaultProps: { underline: 'hover' },
+      styleOverrides: {
+        root: {
+          color: '#000000',
+
+          '&:hover, &.active': {
+            color: '#ff6464',
+          },
+        },
+      },
     },
   },
   // typography: {

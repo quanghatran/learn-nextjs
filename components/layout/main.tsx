@@ -1,4 +1,4 @@
-import { Box, Stack } from '@mui/material';
+import { Box, Container, Stack } from '@mui/material';
 import { Footer, Header } from 'components/common';
 import { LayoutProps } from 'models';
 import Link from 'next/link';
@@ -9,11 +9,13 @@ export function MainLayout({ children }: LayoutProps) {
       <Header />
 
       <Box component="main" flexGrow="1">
-        <Link href="/">Home</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/works">Works</Link>
+        <Container>
+          <Link href="/">Home</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="/works">Works</Link>
 
-        {children}
+          {children}
+        </Container>
       </Box>
 
       <Footer />

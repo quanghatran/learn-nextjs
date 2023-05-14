@@ -1,11 +1,11 @@
 import Button from '@mui/material/Button';
+import { Header } from 'components/common';
 import { AdminLayout } from 'components/layout';
-import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 
 export interface AboutPageProps {}
 
-const Header = dynamic(() => import('components/common/header'), { ssr: false });
+// const Header = dynamic(() => import('components/common/header'), { ssr: false });
 
 export default function AboutPage(props: AboutPageProps) {
   const router = useRouter();
