@@ -1,4 +1,4 @@
-import axiosClient from '@/api/axios-client';
+import axiosClient from '@/api-client/axios-client';
 import { CacheProvider } from '@emotion/react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';

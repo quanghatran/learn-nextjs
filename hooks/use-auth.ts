@@ -1,6 +1,6 @@
+import { authApi } from '@/api-client';
 import useSWR from 'swr';
 import { PublicConfiguration } from 'swr/dist/types';
-import { authApi } from '@/api/index';
 
 const MILLISECOND_PER_HOUR = 60 * 60 * 1000;
 
