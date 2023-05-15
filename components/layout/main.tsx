@@ -8,13 +8,13 @@ export function MainLayout({ children }: LayoutProps) {
       <Header />
 
       <Box component="main" flexGrow="1">
-        <Container>
-          {/* <Link href="/">Home</Link>
+        {/* <Container> */}
+        {/* <Link href="/">Home</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/works">Works</Link> */}
 
-          {children}
-        </Container>
+        {children}
+        {/* </Container> */}
       </Box>
 
       <Footer />
