@@ -11,7 +11,7 @@ import Document, {
 import * as React from 'react';
 
 import { AppPropsWithLayout } from 'models';
-import { createEmotionCache, theme } from '../utils';
+import { createEmotionCache, theme } from '@/utils';
 
 interface MyDocumentProps extends DocumentProps {
   emotionStyleTags: JSX.Element[];

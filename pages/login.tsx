@@ -1,4 +1,5 @@
-import { useAuth } from '@/hooks/use-auth';
+import { LoginForm } from '@/components/auth';
+import { useAuth } from '@/hooks';
 import { useRouter } from 'next/router';
 
 export default function LoginPage() {
@@ -46,6 +47,8 @@ export default function LoginPage() {
       <button onClick={handleLoginClick}>Login</button>
       {/* <button onClick={handleGetProfileClick}>Get Profile</button> */}
       <button onClick={handleLogoutClick}>Logout</button>
+
+      <LoginForm />
     </div>
   );
 }

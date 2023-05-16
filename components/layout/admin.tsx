@@ -1,4 +1,4 @@
-import { useAuth } from '@/hooks/use-auth';
+import { useAuth } from '@/hooks';
 import { Auth } from 'components/common';
 import { LayoutProps } from 'models';
 import Link from 'next/link';

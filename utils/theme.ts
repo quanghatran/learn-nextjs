@@ -67,6 +67,24 @@ export let theme = createTheme({
         { props: { variant: 'contained', color: 'primary' }, style: { color: '#ffffff' } },
       ],
     },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          paddingInline: 2,
+        },
+      },
+      variants: [
+        {
+          props: { color: 'secondary' },
+          style: {
+            backgroundColor: '#142850',
+            color: '#ffffff',
+            fontWeight: 'bold',
+            fontSize: 16,
+          },
+        },
+      ],
+    },
   },
 });
 
