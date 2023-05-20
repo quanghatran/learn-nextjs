@@ -1,5 +1,6 @@
 import { LoginForm } from '@/components/auth';
 import { useAuth } from '@/hooks';
+import { LoginPayload } from '@/models';
 import { useRouter } from 'next/router';
 
 export default function LoginPage() {
@@ -11,7 +12,10 @@ export default function LoginPage() {
 
   async function handleLoginClick() {
     try {
-      await login();
+      await login({
+        username: 'QuangHaaa',
+        password: 'passworld@1234',
+      });
 
       // redirect to dashboard
       router.push('/about');
@@ -38,6 +42,17 @@ export default function LoginPage() {
   //   }
   // }
 
+  async function handleLoginSubmit(payload: LoginPayload) {
+    try {
+      await login(payload);
+
+      // redirect to dashboard
+      router.push('/about');
+    } catch (error) {
+      console.log('failed to login');
+    }
+  }
+
   return (
     <div>
       <h1>Login page</h1>
@@ -48,7 +63,7 @@ export default function LoginPage() {
       {/* <button onClick={handleGetProfileClick}>Get Profile</button> */}
       <button onClick={handleLogoutClick}>Logout</button>
 
-      <LoginForm />
+      <LoginForm onSubmit={handleLoginSubmit} />
     </div>
   );
 }
