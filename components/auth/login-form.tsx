@@ -47,7 +47,9 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
         }}
       />
 
-      <Button type="submit">Submit</Button>
+      <Button type="submit" variant="contained" fullWidth sx={{ mt: 2 }}>
+        Submit
+      </Button>
     </Box>
   );
 }
